@@ -1,0 +1,274 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.discount-scroll {
+  position: relative;
+  width: 100vw;              /* Full screen width */
+  height: 50vh;              /* Adjust the banner height */
+  overflow: hidden;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff;
+  border:1px,black;
+}
+.discount-slides {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+.discount-card {
+  min-width: 100vw;          /* Each slide takes full width of the viewport */
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  position: relative;
+  text-align: center;
+}
+.discount-card img {
+   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops image to fill container */
+  /* OR */
+  object-fit: contain; /* Shows entire image without cropping */
+  /* OR */
+  object-fit: fill; /* Stretches image to fill container */
+  display: block;         
+}
+.discount-card p {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 5px;
+}
+/* Dots Navigation */
+.discount-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .discount-scroll {
+    height: 40vh; /* Slightly smaller on mobile */
+  }
+
+  .discount-card p {
+    font-size: 1rem;
+    bottom: 20px;
+    padding: 8px 14px;
+  }
+}
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+.footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-links a:hover {
+  color: #ff6f61;
+}
+/* Responsive */
+@media screen and (max-width: 1000px) {
+  .shopping-sections {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .shopping-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+  .shop-category {
+    width: 90%;
+  }
+}
+/*ShopSection Css*/
+.shop-container {
+  width: 100%;
+  padding: 40px 5%;
+  background-color: #f8f8f8;
+}
+.shop-row {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* space between images */
+}
+.shop-image {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.shop-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.row-text {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+/* Responsive layout */
+@media (max-width: 768px) {
+  .shop-image {
+    width: 150px;
+    height: 200px;
+  }
+  .row-text {
+    font-size: 1.1rem;
+  }
+}
+.category-section {
+  margin: 40px 20px;
+}
+.mens-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align:center;
+}
+.women-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align:center;
+}
+.kids-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align:center;
+}
+.shoes-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align:center;
+}
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between images */
+}
+.category-row img {
+  width: 200px;        /* Fixed size images */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.category-row img:hover {
+  transform: scale(1.05);
+}
+/* Menu Icon */
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: black;
+  margin-left: 10px;
+  z-index: 1001; /* stays above overlay */
+}
+.menu-item1{
+  border:none;
+  background: transparent;
+  font-size:20px;
+}
+/* Sidebar Menu Hidden by Default */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* hidden initially */
+  width: 250px;
+  height: 100%;
+  background-color: #32a1e0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  z-index: 1000;
+}
+/* Sidebar Open State */
+.side-menu.open {
+  left: 0; /* slide into view */
+}
+/* Menu Items */
+.side-menu .menu-item {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.side-menu .menu-item:hover {
+  background-color: #ce3131;
+}
+/* Overlay (dark transparent background when sidebar open) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}

@@ -1,0 +1,25 @@
+.container1{
+    width:80%;
+    height:60%;
+   
+   
+
+}
+.container2{
+    width:150px;
+    height:140px;
+    border:2px,solid black;
+    border-radius:5px;
+    padding:80px;
+    padding-top:3px;
+    
+    margin-left: 200px;
+    background-color: aquamarine;
+}
+button{
+    background-color: blue;
+    color:white;
+    margin-top:8px;
+     width:150px;
+    height:20px;
+}

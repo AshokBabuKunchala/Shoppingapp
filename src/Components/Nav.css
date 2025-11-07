@@ -1,0 +1,137 @@
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: brown;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hamburger{
+  border:none;
+  background-color: transparent;
+  font-size: 20px;
+}
+.search-con {
+  display: flex;
+  align-items: center; /* Vertically center the icon */
+  gap: 10px; /* Add spacing between input and icon */
+  width: 400px;
+  background-color: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 10px; 
+}
+.search-con input {
+  flex: 1; /* Take remaining width */
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top:8px;
+}
+.search-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+/* Center Section */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 500px;
+  background-color: #f4f4f4;
+  border-radius: 25px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+.search-box input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  padding: 8px 10px;
+  outline: none;
+  font-size: 0.95rem;
+}
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: #ff6f61;
+}
+.nav-link i {
+  margin-right: 5px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 15px;
+  }
+  .nav-center {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .nav-right {
+    order: 2;
+    gap: 10px;
+  }
+  .nav-left {
+    order: 1;
+  }
+  .brand-name {
+    font-size: 1.2rem;
+  }
+}
+.login-btn{
+ border:none;
+  background-color: transparent;
+  font-size: 20px;
+}
+.signup-btn{
+  border:none;
+  background-color: transparent;
+  font-size: 20px;
+  margin-right: 25px;
+}

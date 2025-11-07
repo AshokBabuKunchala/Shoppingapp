@@ -1,0 +1,114 @@
+/* ===== SignIn Page ===== */
+.container1 {
+  /* ✅ Background Image Setup */
+  background-image: url("D:\ReTask\simple-task\src\Assets/backimage.jpg"); /* update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+
+  /* ✅ Layout Setup */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* Form Card */
+.container2 {
+  width: 400px;
+  height:80%;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: -300px;
+}
+
+.container2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.container2 h2 {
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-style:bookman;
+}
+
+/* Labels */
+.container2 label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Inputs */
+.container2 input {
+  width: 100%;
+  height:30px;
+  padding:10px 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.container2 input:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+/* Button */
+.container2 button {
+  width: 100%;
+  height:40px;
+  padding: 12px 0;
+  background-color: #0d6efd;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container2 button:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+/* Paragraph & Links */
+.container2 p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.container2 p a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container2 p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container2 {
+    width: 90%;
+    padding: 25px 20px;
+  }
+}
