@@ -65,20 +65,31 @@ function Home({ cartItems, setCartItems }) {
   };
 
   return (
-    <div className="home-container">
+    <div style={{
+      fontFamily: '"Poppins", sans-serif',
+      backgroundColor: '#f8f9fa',
+      minHeight: '100vh'
+    }}>
      <section>
         <Nav cartItems={cartItems}/>
         </section>
 
-       <section>
+       <section style={{
+         marginTop: '80px' // Account for fixed navbar
+       }}>
         <Slides/>
         </section>
-     <main className="main-section">
+     <main style={{
+       padding: '40px 20px',
+       maxWidth: '1200px',
+       margin: '0 auto'
+     }}>
 
   {/* Men Collection */}
   <section  id="mens-section" className="mens-section">
   <h2>Men's Collection</h2>
-  <div className="category-row">
+  <div className="category-row" style={{ display: 'flex', flexWrap: 'nowrap' }}>
+
  <Link
   to="/inmen"
   state={{
@@ -91,9 +102,9 @@ function Home({ cartItems, setCartItems }) {
     originalPrice: 1499,
     discount: 25,
   }}
-  style={{ textDecoration: "none", color: "inherit" }}
+  style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
 >
-  <img src={men1} alt="Men 1" />
+  <img src={men1} alt="Men 1" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
   <div className="product-info">
     <p>Anuj Fashion</p>
     <p>Men Printed Cotton Blend Straight Kurta</p>
@@ -116,9 +127,9 @@ function Home({ cartItems, setCartItems }) {
     originalPrice: 1499,
     discount: 64,
   }}
-  style={{ textDecoration: "none", color: "inherit" }}
+  style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
 >
-  <img src={men2} alt="Men 2" />
+  <img src={men2} alt="Men 2" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
   <div className="product-info">
     <p>Royal Threads</p>
     <p>Men Solid Cotton Kurta</p>
@@ -141,9 +152,9 @@ function Home({ cartItems, setCartItems }) {
     originalPrice: 1390,
     discount: 65,
   }}
-  style={{ textDecoration: "none", color: "inherit" }}
+  style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
 >
-  <img src={men3} alt="Men 3" />
+  <img src={men3} alt="Men 3" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
   <div className="product-info">
     <p>Anuj Fashion</p>
     <p>Men T-shirt</p>
@@ -166,9 +177,9 @@ function Home({ cartItems, setCartItems }) {
     originalPrice: 1490,
     discount: 84,
   }}
-  style={{ textDecoration: "none", color: "inherit" }}
+  style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
 >
-  <img src={men4} alt="Men 4" />
+  <img src={men4} alt="Men 4" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
   <div className="product-info">
     <p>Vonica</p>
     <p>FullHand T-shirt</p>
@@ -191,9 +202,9 @@ function Home({ cartItems, setCartItems }) {
     originalPrice: 1499,
     discount: 55,
   }}
-  style={{ textDecoration: "none", color: "inherit" }}
+  style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
 >
-  <img src={men5} alt="Men 5" />
+  <img src={men5} alt="Men 5" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
   <div className="product-info">
     <p>Royal Threads</p>
     <p>Men HalfHands Cotton Shirt </p>
@@ -216,9 +227,9 @@ function Home({ cartItems, setCartItems }) {
     originalPrice: 1490,
     discount: 64,
   }}
-  style={{ textDecoration: "none", color: "inherit" }}
+  style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
 >
-  <img src={men6} alt="Men 6" />
+  <img src={men6} alt="Men 6" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
   <div className="product-info">
     <p>Rise Fashions</p>
     <p>Men Hoodie</p>
@@ -235,7 +246,7 @@ function Home({ cartItems, setCartItems }) {
 {/* Women Collection */}
 <section id="women-section" className="women-section">
   <h2>Women's Collection</h2>
-  <div className="category-row">
+  <div className="category-row" style={{ display: 'flex', flexWrap: 'nowrap' }}>
 
     {/* Product 1 */}
     <Link
@@ -250,9 +261,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 1999,
         discount: 50,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={women1} alt="Women 1" />
+      <img src={women1} alt="Women 1" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Elegant Attire</p>
         <p>Women Floral Printed Anarkali Kurta</p>
@@ -280,9 +291,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 1399,
         discount: 55,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={women2} alt="Women 2" />
+      <img src={women2} alt="Women 2" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Trendy Vogue</p>
         <p>Women Solid Georgette Top</p>
@@ -310,9 +321,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 2499,
         discount: 52,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={women3} alt="Women 3" />
+      <img src={women3} alt="Women 3" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Urban Style</p>
         <p>Women Casual Denim Jacket</p>
@@ -340,9 +351,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 1799,
         discount: 53,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={women4} alt="Women 4" />
+      <img src={women4} alt="Women 4" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Grace & Glam</p>
         <p>Women Fit and Flare Dress</p>
@@ -370,9 +381,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 1899,
         discount: 58,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={women5} alt="Women 5" />
+      <img src={women5} alt="Women 5" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>FashionAura</p>
         <p>Women Embroidered Straight Kurta</p>
@@ -400,9 +411,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 1999,
         discount: 55,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={women6} alt="Women 6" />
+      <img src={women6} alt="Women 6" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Style Diva</p>
         <p>Women Hooded Sweatshirt</p>
@@ -423,7 +434,7 @@ function Home({ cartItems, setCartItems }) {
 {/* Kids Collection */}
 <section id="kids-section" className="kids-section">
   <h2>Kids' Collection</h2>
-  <div className="category-row">
+  <div className="category-row" style={{ display: 'flex', flexWrap: 'nowrap' }}>
 
     {/* Product 1 */}
     <Link
@@ -438,9 +449,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 599,
         discount: 66,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={kid1} alt="Kids 1" />
+      <img src={kid1} alt="Kids 1" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Little Champs</p>
         <p>Boys Printed Cotton T-Shirt</p>
@@ -468,9 +479,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 899,
         discount: 63,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={kid2} alt="Kids 2" />
+      <img src={kid2} alt="Kids 2" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Mini Trends</p>
         <p>Girls Floral Dress</p>
@@ -498,9 +509,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 699,
         discount: 64,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={kid3} alt="Kids 3" />
+      <img src={kid3} alt="Kids 3" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>TinyWalk</p>
         <p>Kids Casual Shorts Set</p>
@@ -528,9 +539,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 499,
         discount: 62,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={kid4} alt="Kids 4" />
+      <img src={kid4} alt="Kids 4" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>BabyJoy</p>
         <p>Infant Cotton Romper</p>
@@ -558,9 +569,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 1099,
         discount: 59,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={kid5} alt="Kids 5" />
+      <img src={kid5} alt="Kids 5" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>SmartKid</p>
         <p>Girls Party Frock</p>
@@ -588,9 +599,9 @@ function Home({ cartItems, setCartItems }) {
         originalPrice: 1499,
         discount: 60,
       }}
-      style={{ textDecoration: "none", color: "inherit" }}
+      style={{ textDecoration: "none", color: "inherit", flex: 1, textAlign: 'center' }}
     >
-      <img src={kid6} alt="Kids 6" />
+      <img src={kid6} alt="Kids 6" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <div className="product-info">
         <p>Junior Zone</p>
         <p>Boys Denim Jacket</p>
@@ -610,9 +621,9 @@ function Home({ cartItems, setCartItems }) {
 
   {/* Shoes Collection */}
  
-    <section id="shoes-section" className="shoes-section">
+<section id="shoes-section" className="shoes-section">
       <h2>Shoes Collection</h2>
-      <div className="category-row">
+      <div className="category-row" style={{ display: 'flex', flexWrap: 'nowrap' }}>
 
         {/* Product 1 */}
         <Link
@@ -801,14 +812,112 @@ function Home({ cartItems, setCartItems }) {
 
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="footer-links">
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/terms">Terms & Conditions</Link>
-          <Link to="/privacy">Privacy Policy</Link>
+      <footer style={{
+        backgroundColor: '#2c3e50',
+        color: '#ecf0f1',
+        padding: '40px 20px',
+        marginTop: '60px',
+        fontFamily: '"Poppins", sans-serif'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '20px'
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '15px'
+          }}>
+           {/* <img src={logo1} alt="ShopEasy Logo" style={{
+              width: '50px',
+              height: '50px',
+              borderRadius: '50%',
+              objectFit: 'cover'
+            }} />*/}
+            <div>
+              <h3 style={{
+                margin: '0',
+                fontSize: '24px',
+                fontWeight: '700',
+                background: 'linear-gradient(45deg, #3498db, #2980b9)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>ShopEasy</h3>
+              <p style={{
+                margin: '5px 0 0 0',
+                fontSize: '14px',
+                color: '#bdc3c7'
+              }}>Your one-stop fashion destination</p>
+            </div>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            gap: '30px',
+            flexWrap: 'wrap'
+          }}>
+            <Link to="/about" style={{
+              color: '#ecf0f1',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              transition: 'color 0.3s ease'
+            }}
+            onMouseOver={(e) => e.target.style.color = '#3498db'}
+            onMouseOut={(e) => e.target.style.color = '#ecf0f1'}
+            >About Us</Link>
+
+            <Link to="/contact" style={{
+              color: '#ecf0f1',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              transition: 'color 0.3s ease'
+            }}
+            onMouseOver={(e) => e.target.style.color = '#3498db'}
+            onMouseOut={(e) => e.target.style.color = '#ecf0f1'}
+            >Contact</Link>
+
+            <Link to="/terms" style={{
+              color: '#ecf0f1',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              transition: 'color 0.3s ease'
+            }}
+            onMouseOver={(e) => e.target.style.color = '#3498db'}
+            onMouseOut={(e) => e.target.style.color = '#ecf0f1'}
+            >Terms & Conditions</Link>
+
+            <Link to="/privacy" style={{
+              color: '#ecf0f1',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              transition: 'color 0.3s ease'
+            }}
+            onMouseOver={(e) => e.target.style.color = '#3498db'}
+            onMouseOut={(e) => e.target.style.color = '#ecf0f1'}
+            >Privacy Policy</Link>
+          </div>
         </div>
-        <p>© 2025 ShopEasy. All rights reserved.</p>
+
+        <div style={{
+          borderTop: '1px solid #34495e',
+          marginTop: '30px',
+          paddingTop: '20px',
+          textAlign: 'center',
+          fontSize: '14px',
+          color: '#bdc3c7'
+        }}>
+          <p style={{ margin: '0' }}>© 2025 ShopEasy. All rights reserved. | Made with ❤️ for fashion lovers</p>
+        </div>
       </footer>
     </div>
   );

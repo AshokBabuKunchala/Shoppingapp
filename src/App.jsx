@@ -1,15 +1,10 @@
 import Login from './Components/Login';
 import { useState, useEffect } from 'react';
-import './Components/LoginStyles.css';
 import { BrowserRouter as Router, Routes, Route, useNavigate, Link } from "react-router-dom";
 import SignUp from './Components/SignUp';
-import './Components/SignStyles.css';
 import ForgotPass from './Components/ForgotPass';
-import './Components/ForgotStyles.css';
 import Reset from './Components/Reset';
-import './Components/ResetStyles.css';
-import SignIn from './Components/SignIn';
-import './Components/SignInStyles.css';
+import SignInInline from './Components/SignInInline';
 import Home from './Components/Home';
 import './Components/HomeStyles.css';
 import Mens from "./Components/Mens";
@@ -23,7 +18,7 @@ import InKids from "./Components/InKids";
 import InShoe from "./Components/InShoe";
 import { AuthProvider, useAuth } from "./Components/Authenticate";
 import Cart from "./Components/Cart";
-import Checkout from "./Components/Checkout"; // Placeholder for Checkout component
+                                     // Placeholder for Checkout component
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo1 from "./Assets/logo1.jpg";
 import Nav from "./Components/Nav";
@@ -47,7 +42,7 @@ function AppContent() {
           element={<Cart cartItems={cartItems} setCartItems={setCartItems} onLogout={handleLogout} />}
         />
         <Route path="/nav" element={<Nav />} />
-        <Route path="/" element={<SignIn />} />
+        <Route path="/" element={<SignInInline />} />
         <Route path="/Home" element={<Home cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/inmen" element={<InMen cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/inwomen" element={<InWomen cartItems={cartItems} setCartItems={setCartItems} />} />
@@ -61,7 +56,6 @@ function AppContent() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/ForgotPass" element={<ForgotPass />} />
         <Route path="/Reset" element={<Reset />} />
-        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
   );
