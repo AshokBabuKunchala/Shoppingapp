@@ -1,20 +1,20 @@
 import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
- export const AuthContext = createContext();
+export const AuthContext = createContext();
 
- export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = () => {
     setIsAuthenticated(true);
-    navigate("/Home");
+    navigate("/Home"); // ✅ Go to Home page after sign-in
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    navigate("/signin");
+    navigate("/SignInInline"); // ✅ Back to sign-in after logout
   };
 
   return (

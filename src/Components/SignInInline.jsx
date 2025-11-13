@@ -88,7 +88,7 @@ function SignInInline() {
           borderRadius: '4px',
           cursor: 'pointer',
           marginBottom: '10px'
-        }}>Login</button>
+        }}> Login </button>
         <p style={{ textAlign: 'center', marginBottom: '10px' }}>
           Forgot Password?<Link to="/Forgotpass" style={{ color: '#007bff' }}>click here</Link>
         </p>

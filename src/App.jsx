@@ -1,6 +1,6 @@
 import Login from './Components/Login';
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import SignUp from './Components/SignUp';
 import ForgotPass from './Components/ForgotPass';
 import Reset from './Components/Reset';
@@ -18,16 +18,15 @@ import InKids from "./Components/InKids";
 import InShoe from "./Components/InShoe";
 import { AuthProvider, useAuth } from "./Components/Authenticate";
 import Cart from "./Components/Cart";
-                                     // Placeholder for Checkout component
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo1 from "./Assets/logo1.jpg";
 import Nav from "./Components/Nav";
+
 function AppContent() {
   const { handleLogout, isAuthenticated } = useAuth();
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, setCartCount] = useState(0);
 
-  // Update cart count whenever cartItems changes
   useEffect(() => {
     const count = cartItems.reduce((sum, item) => sum + item.quantity, 0);
     setCartCount(count);
@@ -36,14 +35,10 @@ function AppContent() {
   return (
     <div className="App">
       <Routes>
-
-        <Route
-          path="/cart"
-          element={<Cart cartItems={cartItems} setCartItems={setCartItems} onLogout={handleLogout} />}
-        />
+         <Route path="/" element={<SignInInline />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} onLogout={handleLogout} />} />
         <Route path="/nav" element={<Nav />} />
-        <Route path="/" element={<SignInInline />} />
-        <Route path="/Home" element={<Home cartItems={cartItems} setCartItems={setCartItems} />} />
+        <Route path="/home" element={<Home cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/inmen" element={<InMen cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/inwomen" element={<InWomen cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/inkids" element={<InKids cartItems={cartItems} setCartItems={setCartItems} />} />
@@ -52,10 +47,10 @@ function AppContent() {
         <Route path="/womens" element={<Womens />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/shoes" element={<Shoes />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/ForgotPass" element={<ForgotPass />} />
-        <Route path="/Reset" element={<Reset />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/forgotpass" element={<ForgotPass />} />
+        <Route path="/reset" element={<Reset />} />
       </Routes>
     </div>
   );
@@ -63,11 +58,9 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <AppContent />
-      </AuthProvider>
-    </Router>
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
 

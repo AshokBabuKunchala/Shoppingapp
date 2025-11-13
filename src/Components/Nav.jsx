@@ -130,7 +130,7 @@ function Nav({ cartItems = [] }) {
         left: menuOpen ? 0 : '-250px',
         width: '250px',
         height: '100vh',
-        backgroundColor: 'rgba(255, 255, 255, 0.98)',
+        backgroundColor: 'blue',
         backdropFilter: 'blur(15px)',
         boxShadow: '2px 0 10px rgba(0, 0, 0, 0.1)',
         transition: 'left 0.3s ease-in-out',
@@ -168,7 +168,6 @@ function Nav({ cartItems = [] }) {
           onMouseOver={(e) => e.target.style.backgroundColor = '#f8f9fa'}
           onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
         >👗 Women's Collection</div>
-
         <div
           style={{
             padding: '15px 20px',
@@ -183,7 +182,6 @@ function Nav({ cartItems = [] }) {
           onMouseOver={(e) => e.target.style.backgroundColor = '#f8f9fa'}
           onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
         >🧸 Kids' Collection</div>
-
         <div
           style={{
             padding: '15px 20px',
@@ -198,8 +196,6 @@ function Nav({ cartItems = [] }) {
           onMouseOver={(e) => e.target.style.backgroundColor = '#f8f9fa'}
           onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
         >👟 Shoes Collection</div>
-
-        {isAuthenticated && (
           <div
             style={{
               padding: '15px 20px',
@@ -208,14 +204,13 @@ function Nav({ cartItems = [] }) {
               color: '#dc3545',
               cursor: 'pointer',
               transition: 'background-color 0.3s ease',
-              marginTop: 'auto',
+              marginTop: '0',
               borderTop: '1px solid #f0f0f0'
             }}
             onClick={onLogout}
             onMouseOver={(e) => e.target.style.backgroundColor = '#ffebee'}
             onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
           >🚪 Logout</div>
-        )}
       </div>
 
       {menuOpen && (
@@ -238,7 +233,7 @@ function Nav({ cartItems = [] }) {
         alignItems: 'center',
         gap: '15px'
       }}>
-        {!isAuthenticated && (
+        
           <button
             onClick={() => navigate('/')}
             style={{
@@ -256,9 +251,9 @@ function Nav({ cartItems = [] }) {
             onMouseOver={(e) => e.target.style.backgroundColor = 'aqua'}
             onMouseOut={(e) => e.target.style.backgroundColor = 'aqua'}
           >Login</button>
-        )}
+        
 
-        {!isAuthenticated && (
+        
           <button
             onClick={() => navigate('/SignUp')}
             style={{
@@ -275,7 +270,7 @@ function Nav({ cartItems = [] }) {
             onMouseOver={(e) => e.target.style.backgroundColor = 'aqua'}
             onMouseOut={(e) => e.target.style.backgroundColor = 'aqua'}
           >Sign Up</button>
-        )}
+        
 
         <a
           href="/cart"
