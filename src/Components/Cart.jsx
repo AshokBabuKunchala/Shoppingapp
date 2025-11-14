@@ -56,7 +56,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                     <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="quantity-button">+</button>
                   </div>
                 </div>
-                <button onClick={() => removeFromCart(item.id)} className="remove-button">Remove</button>
+                <button onClick={() => removeFromCart(item.id)} className="remove-button" style={{width:"100px"}}>Remove</button>
               </div>
               
             ))}
@@ -65,7 +65,7 @@ const Cart = ({ cartItems, setCartItems }) => {
           </div>
         )}
         
-        <button onClick={() => navigate('/Home')} className="back-button" style={{marginTop:"10px"}}>Back</button>
+        <button onClick={() => navigate('/Home')} className="back-button" style={{marginTop:"10px",backgroundColor:"blue",height:"20px",width:"100px"}}>Back</button>
       </div>
     </>
   );
