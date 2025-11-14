@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from './Authenticate';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logo1 from "../Assets/logo1.jpg";
 //import './Nav.css';
 
@@ -272,8 +273,8 @@ function Nav({ cartItems = [] }) {
           >Sign Up</button>
         
 
-        <a
-          href="/cart"
+        <Link
+          to="/cart"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -312,7 +313,7 @@ function Nav({ cartItems = [] }) {
               textAlign: 'center'
             }}>({cartCount})</span>
           )}
-        </a>
+        </Link>
       </div>
     </nav>
   );
