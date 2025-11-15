@@ -21,6 +21,7 @@ import Cart from "./Components/Cart";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo1 from "./Assets/logo1.jpg";
 import Nav from "./Components/Nav";
+import Orders from "./Components/Orders";
 
 function AppContent() {
   const { handleLogout, isAuthenticated } = useAuth();
@@ -51,6 +52,7 @@ function AppContent() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path="/reset" element={<Reset />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
     </div>
   );

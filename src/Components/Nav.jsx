@@ -235,12 +235,44 @@ function Nav({ cartItems = [] }) {
         gap: '15px'
       }}>
         
+        <Link
+          to="/Orders"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '8px 12px',
+          /* backgroundColor: 'aqua',*/
+            border: 'none',
+            borderRadius: '6px',
+            textDecoration: 'none',
+            color: 'white',
+            fontSize: '14px',
+            fontWeight: '600',
+            transition: 'all 0.3s ease',
+            position: 'relative',
+            height: '32px'
+          }}
+          onMouseOver={(e) => {
+           /* e.target.style.backgroundColor = 'aqua';*/
+            e.target.style.color = '#fff';
+          }}
+          onMouseOut={(e) => {
+           /* e.target.style.backgroundColor = 'aqua';*/
+            e.target.style.color = 'white';
+          }}
+        >
+          📋 Orders
+        </Link>
+
+
           <button
             onClick={() => navigate('/')}
             style={{
               
               padding: '8px 16px',
-              backgroundColor: 'aqua',
+              backgroundColor: 'none',
+              background:'none',
               color: 'white',
               border: 'none',
               borderRadius: '6px',
@@ -249,8 +281,8 @@ function Nav({ cartItems = [] }) {
               fontWeight: '600',
               transition: 'background-color 0.3s ease'
             }}
-            onMouseOver={(e) => e.target.style.backgroundColor = 'aqua'}
-            onMouseOut={(e) => e.target.style.backgroundColor = 'aqua'}
+           /* onMouseOver={(e) => e.target.style.backgroundColor = 'aqua'}*/
+            /*onMouseOut={(e) => e.target.style.backgroundColor = 'aqua'}*/
           >Login</button>
         
 
@@ -259,7 +291,8 @@ function Nav({ cartItems = [] }) {
             onClick={() => navigate('/SignUp')}
             style={{
               padding: '8px 16px',
-              backgroundColor: 'aqua',
+              /*backgroundColor: 'aqua',*/
+              background:'none',
               color: 'white',
               border: 'none',
               borderRadius: '6px',
@@ -268,8 +301,8 @@ function Nav({ cartItems = [] }) {
               fontWeight: '600',
               transition: 'background-color 0.3s ease'
             }}
-            onMouseOver={(e) => e.target.style.backgroundColor = 'aqua'}
-            onMouseOut={(e) => e.target.style.backgroundColor = 'aqua'}
+            /*onMouseOver={(e) => e.target.style.backgroundColor = 'aqua'}*/
+            /*onMouseOut={(e) => e.target.style.backgroundColor = 'aqua'}*/
           >Sign Up</button>
         
 
@@ -280,7 +313,7 @@ function Nav({ cartItems = [] }) {
             alignItems: 'center',
             gap: '8px',
             padding: '8px 12px',
-            backgroundColor: 'aqua',
+           /* backgroundColor: 'aqua',*/
             border: 'none',
             borderRadius: '6px',
             textDecoration: 'none',
@@ -292,11 +325,11 @@ function Nav({ cartItems = [] }) {
             height:'32px'
           }}
           onMouseOver={(e) => {
-            e.target.style.backgroundColor = 'aqua';
+           /* e.target.style.backgroundColor = 'aqua';*/
             e.target.style.color = '#fff';
           }}
           onMouseOut={(e) => {
-            e.target.style.backgroundColor = 'aqua';
+           /* e.target.style.backgroundColor = 'aqua';*/
             e.target.style.color = 'white';
           }}
         >
@@ -307,7 +340,7 @@ function Nav({ cartItems = [] }) {
               color: 'white',
               borderRadius: '50%',
               padding: '2px 6px',
-              fontSize: '12px',
+              fontSize: '15px',
               fontWeight: 'bold',
               minWidth: '20px',
               textAlign: 'center'

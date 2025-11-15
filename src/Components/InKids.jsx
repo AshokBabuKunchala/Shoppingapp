@@ -31,33 +31,65 @@ function InKids({ cartItems, setCartItems }) {
     navigate('/cart');
   };
 
-  const handleBuyNow = () => {
-    const options = {
-      key: 'rzp_test_RcQnloDQza5avO',
-      amount: product.price * 100, // amount in paisa
-      currency: 'INR',
-      name: 'ShopEasy',
-      description: product.name,
-      image: 'https://example.com/your_logo',
-      handler: function (response) {
-        alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
-        // Handle success, e.g., navigate to success page or update order status
-      },
-      prefill: {
-        name: 'Customer Name',
-        email: 'customer@example.com',
-        contact: '9999999999'
-      },
-      notes: {
-        address: 'ShopEasy Corporate Office'
-      },
-      theme: {
-        color: '#3399cc'
-      }
-    };
-    const rzp = new window.Razorpay(options);
-    rzp.open();
+ const handleBuyNow = () => {
+  const options = {
+    key: 'rzp_test_RcQnloDQza5avO',
+    amount: product.price * 100,
+    currency: 'INR',
+    name: 'ShopEasy',
+    description: product.name,
+    image: 'https://example.com/your_logo',
+
+    handler: function (response) {
+      alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
+
+      // ------------------------------
+      // 1️⃣ Get existing orders
+      // ------------------------------
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+      // ------------------------------
+      // 2️⃣ Create new order object
+      // ------------------------------
+      let newOrder = {
+        id: Date.now(),
+        paymentId: response.razorpay_payment_id,
+        product: product,          // full product details
+        size: selectedSize,         // user selected size
+        date: new Date().toLocaleString()
+      };
+
+      // ------------------------------
+      // 3️⃣ Save to localStorage
+      // ------------------------------
+      orders.push(newOrder);
+      localStorage.setItem("orders", JSON.stringify(orders));
+
+      // ------------------------------
+      // 4️⃣ Redirect to Orders page
+      // ------------------------------
+      window.location.href = "/orders";
+    },
+
+    prefill: {
+      name: 'Customer Name',
+      email: 'customer@example.com',
+      contact: '9999999999'
+    },
+
+    notes: {
+      address: 'ShopEasy Corporate Office'
+    },
+
+    theme: {
+      color: '#3399cc'
+    }
   };
+
+  const rzp = new window.Razorpay(options);
+  rzp.open();
+};
+
 
   if (!product) return <p>Product not found</p>;
 
