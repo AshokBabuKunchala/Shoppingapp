@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import img from "../Assets/bg1.jpg";
 import img1 from "../Assets/bg2.jpg";
 import img2 from "../Assets/bg3.jpg";
-import img3 from "../Assets/bg3.jpg";
+import img3 from "../Assets/bg4.jpg";
 import img4 from "../Assets/bg5.jpg";
 
 function DiscountScroll() {
